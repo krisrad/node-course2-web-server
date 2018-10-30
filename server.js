@@ -44,6 +44,15 @@ app.get("/bad", (req, res) => {
     });
 });
 
+app.get("/projects", (req, res) => {
+    res.render("project.hbs", {
+        welcomeMessage: "Current projects that are WIP",
+        project1Name: "UBS Upgrade",
+        project2Name: "CIMS data migration",
+        project3Name: "Cali State"
+    })
+})
+
 app.listen(port, () => {
     console.log(`"Server is up on port ${port}`);
 });
