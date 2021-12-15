@@ -21,4 +21,4 @@ artifacts:
     - package.json
     - appspec.yml
     - "node_modules/**/*"
-    - "views/*"
+    - "views/**/*"

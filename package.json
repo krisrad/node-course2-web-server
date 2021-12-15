@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "build": "echo 'Building...'",
-    "stop": "echo 'Stopping..."
+    "start": "node ./node_modules/pm2/bin/pm2 start ./server.js --name node_course_app --log ../logs/app.log -f --update-env -- --STACK_NAME ${STACK_NAME}",
+    "stop": "node ./node_modules/pm2/bin/pm2 node_course_app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pm2": "^4.5.0",
     "express": "^4.16.4",
     "hbs": "^4.0.1"
   }
